@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YOLO Landing Page
+
+A modern, interactive landing page for the YOLO project management tool, built with Next.js 15, Three.js, and Framer Motion.
+
+## Features
+
+- 🎨 Modern, playful design with dark mode
+- 📱 Fully responsive (mobile-first)
+- ✨ Interactive 3D visualizations with Three.js
+- 🎭 Smooth animations with Framer Motion
+- 🚀 Optimized performance
+- 🔒 Security headers configured
+- 🐳 Docker support for easy deployment
+
+## Tech Stack
+
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Three.js
+- Framer Motion
+- Docker
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20 or later
+- pnpm package manager
+
+### Development
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/yolo-landing.git
+   cd yolo-landing
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Building for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Docker Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Build the Docker image:
+   ```bash
+   docker build -t yolo-landing .
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Run the container:
+   ```bash
+   docker run -p 3000:3000 yolo-landing
+   ```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/
+│   ├── components/
+│   │   ├── ui/          # Reusable UI components
+│   │   ├── 3d/          # Three.js components
+│   │   └── sections/    # Page sections
+│   ├── lib/            # Utility functions
+│   ├── hooks/          # Custom React hooks
+│   └── styles/         # Global styles
+├── public/            # Static assets
+└── docker/           # Docker configuration
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
